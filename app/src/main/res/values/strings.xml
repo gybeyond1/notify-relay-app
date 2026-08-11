@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">通知中继</string>
+    <string name="service_label">通知监听服务</string>
+    <string name="mode_select_title">选择工作模式</string>
+    <string name="mode_sender">发送端</string>
+    <string name="mode_receiver">接收端</string>
+    <string name="mode_both">双端同步</string>
+    <string name="mode_desc_sender">监听手机通知并转发到服务器</string>
+    <string name="mode_desc_receiver">接收服务器推送的通知并显示</string>
+    <string name="mode_desc_both">同时发送和接收通知</string>
+    <string name="server_url">服务器地址</string>
+    <string name="server_url_hint">例如: http://192.168.1.100:8000</string>
+    <string name="token">Token</string>
+    <string name="token_hint">与服务器配置一致</string>
+    <string name="btn_connect">连接</string>
+    <string name="btn_disconnect">断开</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_disconnected">未连接</string>
+    <string name="status_connecting">连接中...</string>
+    <string name="notify_listening">通知监听已启动</string>
+    <string name="notify_stopped">通知监听已停止</string>
+    <string name="perm_notification_listener">通知监听权限</string>
+    <string name="perm_notification_listener_desc">需要此权限才能读取并转发通知</string>
+    <string name="perm_post_notification">通知显示权限</string>
+    <string name="perm_post_notification_desc">需要此权限才能显示收到的通知</string>
+    <string name="btn_grant_permission">前往设置开启</string>
+    <string name="mode_config">模式配置</string>
+    <string name="current_mode">当前模式</string>
+    <string name="sender_mode">发送端</string>
+    <string name="receiver_mode">接收端</string>
+    <string name="dual_mode">双端同步</string>
+    <string name="notifications_received">收到通知</string>
+    <string name="notifications_sent">发送通知</string>
+    <string name="clear_history">清空历史</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="notification_relay">通知中继</string>
+    <string name="channel_name">通知中继</string>
+    <string name="channel_desc">用于显示转发的通知</string>
+</resources>
