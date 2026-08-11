@@ -26,7 +26,7 @@ class WebSocketService : Service() {
     private var webSocket: WebSocketClient? = null
     private var serverUrl: String = ""
     private var token: String = ""
-    private val notificationManager by lazy { getSystemService(NotificationManager::class.java) }
+    private val notificationManager by lazy { getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager }
 
     override fun onBind(intent: Intent?): IBinder? = null
 
