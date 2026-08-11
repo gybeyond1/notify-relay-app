@@ -72,7 +72,7 @@ class NotificationService : NotificationListenerService() {
 
         val request = Request.Builder()
             .url("$serverUrl/notify")
-            .post(RequestBody.create(MediaType.parse("application/json"), json.toString()))
+            .post(RequestBody.create(MediaType.get("application/json"), json.toString()))
             .addHeader("Authorization", "Bearer $token")
             .build()
 
