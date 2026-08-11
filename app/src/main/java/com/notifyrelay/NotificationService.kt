@@ -9,6 +9,8 @@ import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log
 import okhttp3.*
+import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.MediaType.Companion.toMediaType
 import org.json.JSONObject
 import java.io.IOException
 
@@ -72,7 +74,7 @@ class NotificationService : NotificationListenerService() {
 
         val request = Request.Builder()
             .url("$serverUrl/notify")
-            .post(RequestBody.create(MediaType.get("application/json"), json.toString()))
+            .post(json.toString().toRequestBody("application/json".toMediaType()))
             .addHeader("Authorization", "Bearer $token")
             .build()
 
