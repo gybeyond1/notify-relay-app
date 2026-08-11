@@ -22,11 +22,10 @@ jobs:
         cache: gradle
     
     - name: Grant execute permission for gradlew
-      run: chmod +x notify-relay-app/gradlew || true
+      run: chmod +x gradlew || true
     
     - name: Build Debug APK
       run: |
-        cd notify-relay-app
         chmod +x gradlew
         ./gradlew assembleDebug
     
@@ -34,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: NotifyRelay-Debug
-        path: notify-relay-app/app/build/outputs/apk/debug/*.apk
+        path: app/build/outputs/apk/debug/*.apk
         retention-days: 30
