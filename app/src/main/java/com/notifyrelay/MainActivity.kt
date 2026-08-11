@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             .setTitle(R.string.mode_select_title)
             .setItems(modes) { _, which ->
                 currentMode = modeValues[which]
-                saveConfig()
+                saveModeOnly()
                 showConfigScreen()
             }
             .setCancelable(false)
@@ -274,9 +274,15 @@ class MainActivity : AppCompatActivity() {
     private fun saveConfig() {
         val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit()
-            .putString(KEY_MODE, currentMode)
             .putString(KEY_SERVER_URL, etServerUrl.text.toString().trim())
             .putString(KEY_TOKEN, etToken.text.toString().trim())
+            .apply()
+    }
+    
+    private fun saveModeOnly() {
+        val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit()
+            .putString(KEY_MODE, currentMode)
             .apply()
     }
     
